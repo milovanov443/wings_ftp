@@ -31,3 +31,22 @@ SFTP вырезан
 
 
 Модуль будет удобен тем, кто делает биллинг+pterodactyl систему, в идеале через оболочку, как это сделает azerta.ru в январе 2026 (или декабря 2025)
+
+В config.yml локации надо прописать:
+system: 
+    ftp:
+        bind_address: 0.0.0.0
+        bind_port: 21
+        read_only: false
+
+Компиляция:
+
+go build -o wings -ldflags="-s -w" .
+
+Запуск:
+
+./wings
+
+Контакты:
+
+https://t.me/milovanov443
